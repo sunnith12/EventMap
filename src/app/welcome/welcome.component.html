@@ -1,0 +1,39 @@
+<div class="welcome-page">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="brand">🎉 EventMap</span>
+      <a href="/welcome">Home</a>
+      <a (click)="aboutUS()">About Us</a>
+      <a href="/support">Support</a>
+    </div>
+    <div class="nav-right">
+      <button class="sbt signout-btn" (click)="signOut()">Sign Out</button>
+    </div>
+  </nav>
+
+  <!-- Full page welcome content (no container) -->
+  <div class="welcome-box">
+
+    <h1>Welcome to EventMap</h1>
+    <p class="subheading">Find events happening around you in just one click. Enter your zip code below and discover something fun!</p>
+
+    <div class="search-section">
+      <input type="text" [(ngModel)]="zipCode" placeholder="Enter your zip code" class="un">
+      <button class="sbt" (click)="searchEvent()">Search</button>
+    </div>
+
+    <h3>Upcoming Events</h3>
+
+    <div class="event-results">
+      <div *ngFor="let event of events" class="event-card">
+        <h4>{{ event.name }}</h4>
+        <img [src]="event.src" width="200px" height="200px" />
+        <p>{{ event.date }}</p>
+        <p>{{ event.location }}</p>
+        <button *ngIf='eventtrue' class="sbt" (click)="bookEvent(event.name)">Book Now</button>
+      </div>
+    </div>
+
+  </div>
+</div>

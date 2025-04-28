@@ -1,0 +1,13 @@
+
+<div class="login-container">
+
+<div class="logindiv">
+    <h1>Event Map</h1>
+    <small *ngIf="invalidLogin">{{errorMessage}}</small>
+User Name : <input type="text" class="un" name="username"  [(ngModel)]="username">
+Password : <input type="password" class="pwd" name="password" [(ngModel)]="password">
+<p></p>
+<button type="submit" class="sbt" (click)="login()">Login</button>
+<button class="sbt" (click)="registerUser()">Create Account</button>
+</div>
+</div>
