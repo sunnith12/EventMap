@@ -1,0 +1,67 @@
+/* Full screen container to center content */
+.login-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #434343, #9898b8); /* light blue gradient */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Login box styling */
+  .logindiv {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Labels */
+  .logindiv label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Input fields */
+  .logindiv input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+  }
+  
+  .logindiv input:focus {
+    border-color: #66a6ff;
+    box-shadow: 0 0 4px rgba(102, 166, 255, 0.5);
+  }
+  
+  /* Button styling */
+  .sbt {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sbt:hover {
+    background-color: #357ABD;
+  }
+  
+  /* Error message */
+  .error-message {
+    position: absolute;
+    top: 20px;
+    color: red;
+    font-size: 0.9rem;
+  }
+  
